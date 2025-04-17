@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+
+body{
+  font-family: "Noto Sans Thai", sans-serif;
+  background-color: rgb(103, 124, 117);
+}
+
+html {
+  overflow-y: scroll;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

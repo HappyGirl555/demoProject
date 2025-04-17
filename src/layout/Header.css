@@ -1,0 +1,37 @@
+header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(251, 244, 235);
+}
+
+.contain-header{
+    max-width: 1100px;
+    width: 1100px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: auto;
+    background-color: rgb(251, 244, 235);
+}
+
+.butt-bar{
+    padding: 0 30px 0 30px;
+    box-sizing: border-box;
+}
+
+.butt-bar:hover{
+    background-color: rgb(173, 208, 241);
+    cursor: pointer;
+}
+
+.butt-bar:hover p{
+    color:rgb(18, 113, 169);
+}
+
+.butt-bar a{
+    font-weight: 800;
+    color: black;
+    text-decoration:none;
+}
+

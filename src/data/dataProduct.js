@@ -1,0 +1,247 @@
+import picture from "./picture/picture"
+
+const dataProduct =[
+    {
+        "id": 1,
+        "name": "มะเขือเทศ",
+        "type": "ผัก",
+        "price_per_unit": 25,
+        "unit": "กิโลกรัม",
+        "stock": 100,
+        "origin": "เชียงใหม่",
+        "organic": true,
+        "image": picture.tomato,
+        "description": "มะเขือเทศสดจากไร่เชียงใหม่ ไม่ใช้สารเคมี"
+    },
+    {
+      "id": 2,
+      "name": "มะม่วงน้ำดอกไม้",
+      "type": "ผลไม้",
+      "price_per_unit": 50,
+      "unit": "กิโลกรัม",
+      "stock": 60,
+      "origin": "ราชบุรี",
+      "organic": false,
+      "image": picture.mango,
+      "description": "มะม่วงหวาน หอม ผลใหญ่"
+    },
+    {
+      "id": 3,
+      "name": "แตงกวา",
+      "type": "ผัก",
+      "price_per_unit": 15,
+      "unit": "กิโลกรัม",
+      "stock": 120,
+      "origin": "กรุงเทพฯ",
+      "organic": true,
+      "image": picture.cucumber,
+      "description": "แตงกวาสดจากฟาร์มออร์แกนิก"
+    },
+    {
+      "id": 4,
+      "name": "ส้ม",
+      "type": "ผลไม้",
+      "price_per_unit": 40,
+      "unit": "กิโลกรัม",
+      "stock": 80,
+      "origin": "เชียงราย",
+      "organic": false,
+      "image": picture.orange,
+      "description": "ส้มหวาน สดชื่น"
+    },
+    {
+      "id": 5,
+      "name": "ข้าวโพด",
+      "type": "ผลไม้",
+      "price_per_unit": 18,
+      "unit": "ห่อ",
+      "stock": 200,
+      "origin": "สุราษฎร์ธานี",
+      "organic": true,
+      "image": picture.corn,
+      "description": "ข้าวโพดหวาน สดจากไร่"
+    },
+    {
+      "id": 6,
+      "name": "กล้วยหอม",
+      "type": "ผลไม้",
+      "price_per_unit": 30,
+      "unit": "หวี",
+      "stock": 150,
+      "origin": "นครสวรรค์",
+      "organic": false,
+      "image": picture.banana,
+      "description": "กล้วยหอมหวานอร่อย"
+    },
+    {
+      "id": 7,
+      "name": "มะนาว",
+      "type": "ผลไม้",
+      "price_per_unit": 12,
+      "unit": "ลูก",
+      "stock": 250,
+      "origin": "ชลบุรี",
+      "organic": true,
+      "image": picture.lime,
+      "description": "มะนาวสดจากสวน"
+    },
+    {
+      "id": 8,
+      "name": "คะน้า",
+      "type": "ผัก",
+      "price_per_unit": 20,
+      "unit": "กิโลกรัม",
+      "stock": 110,
+      "origin": "เพชรบุรี",
+      "organic": true,
+      "image": picture.kale,
+      "description": "คะน้าสด ตราสินค้า"
+    },
+    {
+      "id": 9,
+      "name": "แครอท",
+      "type": "ผัก",
+      "price_per_unit": 30,
+      "unit": "กิโลกรัม",
+      "stock": 130,
+      "origin": "เชียงใหม่",
+      "organic": false,
+      "image": picture.carrot,
+      "description": "แครอทสดจากฟาร์ม"
+    },
+    {
+      "id": 10,
+      "name": "สับปะรด",
+      "type": "ผลไม้",
+      "price_per_unit": 25,
+      "unit": "ลูก",
+      "stock": 140,
+      "origin": "กระบี่",
+      "organic": true,
+      "image": picture.pineapple,
+      "description": "สับปะรดหวานและหอม"
+    },
+    {
+      "id": 11,
+      "name": "มะพร้าว",
+      "type": "ผลไม้",
+      "price_per_unit": 20,
+      "unit": "ลูก",
+      "stock": 180,
+      "origin": "สมุทรสงคราม",
+      "organic": false,
+      "image": picture.coconut,
+      "description": "มะพร้าวน้ำหอม"
+    },
+    {
+      "id": 12,
+      "name": "ผักบุ้ง",
+      "type": "ผัก",
+      "price_per_unit": 10,
+      "unit": "กิโลกรัม",
+      "stock": 200,
+      "origin": "นครราชสีมา",
+      "organic": true,
+      "image": picture.waterSpinach,
+      "description": "ผักบุ้งสดจากฟาร์ม"
+    },
+    {
+      "id": 13,
+      "name": "ลูกพลับ",
+      "type": "ผลไม้",
+      "price_per_unit": 35,
+      "unit": "ลูก",
+      "stock": 50,
+      "origin": "กาญจนบุรี",
+      "organic": false,
+      "image": picture.plub,
+      "description": "พลับหวาน มัน"
+    },
+    {
+      "id": 14,
+      "name": "ทุเรียน",
+      "type": "ผลไม้",
+      "price_per_unit": 150,
+      "unit": "ลูก",
+      "stock": 40,
+      "origin": "สุราษฎร์ธานี",
+      "organic": true,
+      "image": picture.durian,
+      "description": "ทุเรียนหมอนทอง"
+    },
+    {
+      "id": 15,
+      "name": "มะเขือยาว",
+      "type": "ผัก",
+      "price_per_unit": 18,
+      "unit": "กิโลกรัม",
+      "stock": 90,
+      "origin": "ระยอง",
+      "organic": false,
+      "image": picture.eggPlant,
+      "description": "มะเขือยาวสดจากไร่"
+    },
+    {
+      "id": 16,
+      "name": "บล็อกโคลี",
+      "type": "ผัก",
+      "price_per_unit": 50,
+      "unit": "กิโลกรัม",
+      "stock": 80,
+      "origin": "เชียงใหม่",
+      "organic": true,
+      "image": picture.broccoli,
+      "description": "บล็อกโคลีสด"
+    },
+    {
+      "id": 17,
+      "name": "กะหล่ำปลี",
+      "type": "ผัก",
+      "price_per_unit": 25,
+      "unit": "หัว",
+      "stock": 100,
+      "origin": "นครศรีธรรมราช",
+      "organic": true,
+      "image": picture.cabbage,
+      "description": "กะหล่ำปลีสด"
+    },
+    {
+      "id": 18,
+      "name": "กระเทียม",
+      "type": "ผัก",
+      "price_per_unit": 40,
+      "unit": "กิโลกรัม",
+      "stock": 75,
+      "origin": "สุพรรณบุรี",
+      "organic": false,
+      "image": picture.garlic,
+      "description": "กระเทียมสด"
+    },
+    {
+      "id": 19,
+      "name": "องุ่น",
+      "type": "ผลไม้",
+      "price_per_unit": 120,
+      "unit": "กิโลกรัม",
+      "stock": 50,
+      "origin": "เชียงราย",
+      "organic": true,
+      "image": picture.grape,
+      "description": "องุ่นหวานหอม"
+    },
+    {
+      "id": 20,
+      "name": "ลิ้นจี่",
+      "type": "ผลไม้",
+      "price_per_unit": 50,
+      "unit": "กิโลกรัม",
+      "stock": 60,
+      "origin": "เชียงใหม่",
+      "organic": false,
+      "image": picture.lychee,
+      "description": "ลิ้นจี่หวาน สด"
+    }
+  ]
+
+  
+export default dataProduct;

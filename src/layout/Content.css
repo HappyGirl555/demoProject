@@ -1,0 +1,13 @@
+.contain-content{
+    display:flex;
+    justify-content: center;
+    flex: 1; 
+}
+
+.content{
+    max-width: 1100px;
+    width: 1100px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box;
+}
