@@ -1,0 +1,64 @@
+.hist-box{
+    width: 800px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+.header-box{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgb(182, 203, 255);
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+}
+
+
+.header-box h3{
+    text-align: left;
+}
+
+.describe-history{
+    display: grid;
+    grid-auto-rows: auto; 
+    row-gap: 10px;
+}
+
+.head-describe-pd-history, .describe-pd-history{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.fa.fa-caret-down.hidden{
+    transform: rotate(180deg);
+    transition: transform 0.7s ease;
+}
+
+.fa.fa-caret-down.visited{
+    transform: rotate(0deg);
+    transition: transform 0.7s ease;
+}
+
+.fa.fa-caret-down:hover{
+    cursor: pointer;
+    color: bisque;
+}
+
+.details-box.hidden {
+    display: none;
+}
+  
+.details-box.visible {
+    display: block;
+    background-color: rgb(196, 255, 255);
+    padding: 5px;
+    margin: 6px;
+    border-radius: 10px;
+}
+
+.payment-type{
+    display: flex;
+    padding: 10px 15px 10px 15px;
+    justify-content: space-between;
+    align-items: center;
+}

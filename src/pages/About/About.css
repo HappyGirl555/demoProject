@@ -1,0 +1,97 @@
+
+.animate {
+    animation: fadeInUp 1s forwards;
+    
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.about-box{
+  margin: 50px;
+  display: inline-block;
+}
+
+.about-box p{
+  font-size: 18px;
+}
+
+.header-about{
+}
+
+.descrip-cpn{
+  width: auto;
+  margin-bottom: 50px;
+}
+
+.descrip-cpn .pic{
+  display: flex;
+  gap: 20px;
+  justify-self: center;
+  align-items: center;
+}
+
+.descrip-cpn .pic img{
+  width: 450px;
+  height: 300px;
+  object-fit: fill;
+}
+
+.mission-cpn{
+  margin-bottom: 50px;
+  border: 1px solid rgb(177, 177, 177);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.vision-cpn{
+  margin-bottom: 50px;
+  border: 1px solid rgb(177, 177, 177);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.whatWeDo-cpn{
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.whatWeDo-cpn-each{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  background-color:rgba(190, 230, 190,0.8);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.whatWeDo-cpn-each:nth-child(even){
+  background-color:rgba(243, 237, 174,0.8);
+}
+
+.whatWeDo-cpn-each img{
+  width: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.whatWeDo-cpn-each .detail{
+  width: 500px;
+  text-align: left;
+}
+
+.commitment-cpn{
+  margin-bottom: 30px;
+  border: 1px solid rgb(177, 177, 177);
+  padding: 20px;
+  border-radius: 20px;
+}
+

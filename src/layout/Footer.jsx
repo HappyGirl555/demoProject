@@ -6,7 +6,6 @@ const Footer = () =>{
     return (
         <footer>
             <div className="contain-footer">
-                Hellooo
             </div>
         </footer>
     )

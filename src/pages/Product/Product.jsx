@@ -65,7 +65,18 @@ const Product = () =>{
 
     const paySelectedProduct = (e) =>{
         if (selectedProduct.length !== 0){
-            navigate("/payment", { state: { selectedProduct } });
+            navigate("/payment", { 
+                state: {  
+                  selectedProducts: selectedProduct.map((pd) => ({
+                    pid: pd.product.id,
+                    pname: pd.product.name,
+                    price_per_unit: pd.product.price_per_unit,
+                    punit: pd.product.unit,
+                    quantity: pd.quantity,
+                    payEachProduct: pd.quantity * pd.product.price_per_unit
+                  }))
+                } 
+            });
         }else{
             e.preventDefault();
             Swal.fire({
@@ -93,7 +104,7 @@ const Product = () =>{
     return (
     <>
         <div className="topic-page">
-            <h1>รายการสินค้า</h1>
+            <h1>รายการผลิตภัณฑ์</h1>
         </div>
         <div className="bar-type">
             <div onClick={() => selectType("ทั้งหมด")} 
@@ -137,21 +148,10 @@ const Product = () =>{
                             </div>
                             <div className="selected-pd">
                                 <div className="price">
-                                    <h4 style={{margin:"0px"}}>ราคา&nbsp;{product.price_per_unit}&nbsp;บาท/{product.unit}</h4>
+                                    <h4 style={{margin:"0px", textAlign:"center"}}>ราคา&nbsp;{product.price_per_unit}&nbsp;บาท/{product.unit}</h4>
                                 </div>
                                 <div className="butt-product-select">
-                                    <div className={`drop-butt ${selectedProduct.find((pd) => pd.product.id === product.id)?.quantity >= 1 ? "" : "no"}` } 
-                                    onClick={ () =>{
-                                        if (selectedProduct.find((pd) => pd.product.id === product.id)?.quantity > 0) {
-                                        dropNumProductSelec(product);
-                                        }}}>
-                                        <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>-</p>
-                                    </div>
-                                    <div className="num">
-                                        <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>
-                                            {selectedProduct.find((pd) => pd.product.id === product.id)?.quantity || 0}</p>
-                                    </div>
-                                     <div className={`add-butt ${products.find((pd) => pd.id === product.id)?.stock === 0 ?"no" : ""}`} 
+                                <div className={`add-butt ${products.find((pd) => pd.id === product.id)?.stock === 0 ?"no" : ""}`} 
                                     onClick={() =>{
                                         if (product.stock > 0) {
                                             addNumProductSelec(product)
@@ -159,11 +159,22 @@ const Product = () =>{
                                     >
                                         <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>+</p>
                                     </div>
+                                    <div className="num">
+                                        <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>
+                                            {selectedProduct.find((pd) => pd.product.id === product.id)?.quantity || 0}</p>
+                                    </div>
+                                    <div className={`drop-butt ${selectedProduct.find((pd) => pd.product.id === product.id)?.quantity >= 1 ? "" : "no"}` } 
+                                    onClick={ () =>{
+                                        if (selectedProduct.find((pd) => pd.product.id === product.id)?.quantity > 0) {
+                                        dropNumProductSelec(product);
+                                        }}}>
+                                        <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>-</p>
+                                    </div>
                                 </div>
                             </div>
                             
                             <div className="stock-pd">
-                                <p style={{margin:0, color:"rgb(195, 109, 44)"}}>จำนวนสินค้า {product.stock}&nbsp;{product.unit}</p>
+                                <p style={{margin:0, color:"rgb(195, 109, 44)", textAlign:"center"}}>จำนวนสินค้า {product.stock}&nbsp;{product.unit}</p>
                             </div>
                         </div>
                     </div>

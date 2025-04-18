@@ -8,16 +8,16 @@ const Header = () =>{
 
             <div className="contain-header">
                 <div className="butt-bar">
-                <NavLink to='/'><p>Home</p></NavLink>
+                <NavLink to='/'><p>หน้าหลัก</p></NavLink>
                 </div>
                 <div className="butt-bar">
-                <NavLink to='product'><p>Product</p></NavLink>
+                <NavLink to='product'><p>ผลิตภัณฑ์</p></NavLink>
                 </div>
                 <div className="butt-bar">
-                <NavLink to='about'><p>About</p></NavLink>
+                <NavLink to='about'><p>เกี่ยวกับเรา</p></NavLink>
                 </div>
                 <div className="butt-bar">
-                <NavLink to='history'><p>History</p></NavLink>
+                <NavLink to='history'><p>ประวัติการสั่งซื้อ</p></NavLink>
                 </div>
             </div>
     

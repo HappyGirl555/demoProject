@@ -6,17 +6,17 @@ import Swal from "sweetalert2";
 const Payment = () =>{
     const [typePayment, setTypePayment] = useState(null);
     const location = useLocation();
-    const selectedProduct = location.state?.selectedProduct;
+    const selectedProducts = location.state?.selectedProducts;
     const navigate = useNavigate();
+    console.log(selectedProducts)
+
 
     const payAll = () => {
-        const cost_product = selectedProduct.map((pd) => ({
-          quantity: pd.quantity,
-          cost_per_unit: pd.product.price_per_unit
-        }));
-      
+        const cost_product = selectedProducts.map((pd) => ({
+            payEachProduct: pd.payEachProduct,
+    }));
         return cost_product.reduce((sum, item) => {
-          return sum + item.quantity * item.cost_per_unit;
+          return sum + item.payEachProduct ;
         }, 0)
     };
 
@@ -39,7 +39,14 @@ const Payment = () =>{
             timer: 3500,
             showConfirmButton: false
              });
-            navigate("/history", { state: {selectedProduct}})
+
+            navigate("/history", { state: {
+                paidProducts : selectedProducts, 
+                totalPrice:`${payAll()}`,
+                payType: typePayment,
+                date: new Date().toLocaleString('th-TH', { year: 'numeric', month: 'long', day: 'numeric'}),
+                time: new Date().toTimeString().slice(0,5)
+            }})
         }
     }
     
@@ -57,12 +64,12 @@ const Payment = () =>{
                     </div>
                     <div className="describe-payment">
                     {
-                        selectedProduct.map((pd,index) =>(
+                        selectedProducts.map((pd,index) =>(
                             (
                                 <div class="describ-pd" key={index}>
-                                    <p>{pd.product.name}</p>
-                                    <p>{pd.quantity} {pd.product.unit}</p>
-                                    <p>{pd.product.price_per_unit*pd.quantity}.-</p>
+                                    <p>{pd.pname}</p>
+                                    <p>{pd.quantity} {pd.punit}</p>
+                                    <p>{pd.payEachProduct}.-</p>
                                 </div>
                             )
                         ))
