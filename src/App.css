@@ -68,3 +68,8 @@ html, body {
     opacity: 1;
   }
 }
+
+body.swal2-shown {
+  padding-right: 0 !important;
+  overflow: hidden;
+}

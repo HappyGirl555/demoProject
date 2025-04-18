@@ -7,7 +7,7 @@ const dataProduct =[
         "type": "ผัก",
         "price_per_unit": 25,
         "unit": "กิโลกรัม",
-        "stock": 100,
+        "stock": 5,
         "origin": "เชียงใหม่",
         "organic": true,
         "image": picture.tomato,

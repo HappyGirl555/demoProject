@@ -5,6 +5,8 @@ import Product from "./pages/Product/Product"
 import Payment from "./pages/Payment/Payment"
 import About from "./pages/About/About"
 import Home from "./pages/Home/Home"
+import History from './pages/History/History';
+import DescriptionHistory from "./pages/DescriptionHistory/DescriptionHistory"
 import { createBrowserRouter,createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
 
@@ -15,6 +17,9 @@ const router = createBrowserRouter(
       <Route path='/product' element={<Product/>} /> 
       <Route path='/payment' element={<Payment/>} />
       <Route path='/about' element={<About/>} /> 
+      <Route path='/history' element={<History/>}> 
+        <Route path='descriptionHistory' element={<DescriptionHistory/>} />
+      </Route>
     </Route>
   )
 )

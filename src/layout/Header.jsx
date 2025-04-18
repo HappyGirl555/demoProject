@@ -16,6 +16,9 @@ const Header = () =>{
                 <div className="butt-bar">
                 <NavLink to='about'><p>About</p></NavLink>
                 </div>
+                <div className="butt-bar">
+                <NavLink to='history'><p>History</p></NavLink>
+                </div>
             </div>
     
     </header>

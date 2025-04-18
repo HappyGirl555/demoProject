@@ -29,13 +29,14 @@
     grid-template-columns: auto auto auto auto;
     align-content: center;
     justify-content: center;
-    gap: 20px
+    gap: 20px;
+    text-align: left;
 }
 
 .pd-box{
     border-radius: 30px;
-    border: 5px solid rgb(214, 225, 223);
-    background-color:rgb(214, 225, 223); 
+    border: 1px solid rgb(195, 195, 195);
+    background-color:rgb(255, 255, 255); 
     width: 220px;
     height: auto;
     padding: 20px;
@@ -46,14 +47,15 @@
     box-sizing: border-box;
 }
 
+/*
 .pd-box:hover{
     cursor: pointer;
     background-color: rgb(255, 246, 196);
-    border: 5px solid rgb(255, 246, 196);
-}
+    border: 1px solid rgb(255, 246, 196);
+}*/
 
 .pd-box.selected{
-    border: 5px solid rgb(112, 113, 73);
+    border: 1px solid rgb(112, 113, 73);
     box-shadow: 0px 0px 10px rgb(57, 73, 78);
 }
 
@@ -70,14 +72,13 @@
 
 .content-pd{
     display: grid;
-    grid-template-rows: 1fr 1fr 0.2fr;
+    grid-template-rows: 1fr 0.9fr 0.2fr;
     gap: 5px;
 }
 
-.content-pd .price{
-    display: flex;
-    justify-self: flex-end;
-    align-items: center;
+.price{
+    text-align: right;
+    margin-bottom: 10px ;
 }
 
 .payment{
@@ -85,12 +86,13 @@
     justify-content: flex-end;
     align-items: center;
     margin: 30px;
+    gap: 20px;
 }
 
 .payment .payment-butt{
     text-align: center;
     width: 100px;
-    height: 70px;
+    height: 60px;
     border-radius: 20px;
     background-color: rgb(45, 83, 177);
     color: aliceblue;
@@ -99,4 +101,43 @@
 .payment .payment-butt:hover{
     cursor: pointer;
     background-color: rgb(28, 49, 100);
+}
+
+.stock-pd{
+    text-align: right;
+    margin-top:10px;
+}
+
+.butt-product-select {
+    display: flex;
+    gap:10px;
+}
+
+.butt-product-select div{
+    width: 50px;
+    height: 50px;
+    border: 1px solid green;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.butt-product-select .add-butt,
+.butt-product-select .drop-butt {
+    color: white;
+    background-color: rgb(53, 102, 125);
+}
+
+.butt-product-select .add-butt:hover,
+.butt-product-select .drop-butt:hover {
+    cursor: pointer;
+    background-color: rgb(32, 51, 60);
+}
+
+.butt-product-select .add-butt.no,
+.butt-product-select .drop-butt.no{
+    background-color: rgb(181, 181, 181);
+    border: 1px solid rgb(181, 181, 181);
+    cursor: not-allowed;
 }

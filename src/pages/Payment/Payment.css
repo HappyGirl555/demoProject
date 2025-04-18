@@ -1,0 +1,108 @@
+.payment-form{
+    width: 600px;
+    display: inline-block;
+}
+
+.payment-topic{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-payment, .describ-pd{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.describ-pd{
+    border: 1px solid rgb(179, 179, 179);
+    padding: 5px;
+}
+
+
+.header-payment{
+    border: 1px solid rgb(247, 242, 173);
+    background-color: rgb(247, 242, 173);
+}
+
+
+.describ-pd p, .header-payment h3{
+    text-align: center;
+}
+
+.pay-all{
+    border: 1px solid rgb(199, 217, 234);
+    background-color: rgb(199, 217, 234);
+    border-radius: 20px;
+    margin: 10px;
+    padding: 7px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:"a a b";
+    text-align: center;
+}
+
+
+.pay-selected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.pay-selected-butt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    border: 1px solid  rgb(145, 166, 220);
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.pay-selected-butt:hover{
+    border: 1px solid  rgb(175, 200, 200);
+    background-color: rgb(175, 200, 200);
+    cursor: pointer;
+}
+
+.pay-selected-butt.selected{
+    border: 1px solid  rgb(188, 217, 186);
+    background-color: rgb(188, 217, 186);
+}
+
+
+.pay-selected-butt p{
+    margin: 0;
+}
+
+.pay-success{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pay-success-butt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: rgb(45, 83, 177);
+    color: aliceblue;
+}
+
+.pay-success-butt:hover{
+    background-color: rgb(28, 54, 120);
+    cursor: pointer;
+}
+
+.pay-success-butt p{
+    margin: 0;
+}
