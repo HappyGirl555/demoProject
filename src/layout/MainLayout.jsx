@@ -10,7 +10,6 @@ const MainLayOut = () =>{
         <div className="app">
             <Header />
             <Content />
-            <Footer />
         </div>
     )
 

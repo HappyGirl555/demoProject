@@ -8,7 +8,7 @@ const About = () =>{
 
     useEffect(() => {
         function reveal() {
-          const items = document.querySelectorAll(".about-box,.descrip-cpn,.mission-cpn,.vision-cpn,.whatWeDo-cpn,.descrip-cpn,.commitment-cpn.whatWeDo-cpn-each");
+          const items = document.querySelectorAll(".about-box,.descrip-cpn,.mission-cpn,.vision-cpn,.whatWeDo-cpn,.descrip-cpn,.commitment-cpn,.whatWeDo-cpn-each");
           items.forEach(item => {
             const itemTop = item.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
@@ -31,7 +31,7 @@ const About = () =>{
         <>
             <div className="about-box">
                 <div className="header-about">
-                    <h1>{company.companyName}</h1>
+                    <h1>🍎{company.companyName}🍎</h1>
                 </div>
                 <div className="descrip-cpn">
                     <p dangerouslySetInnerHTML={{ __html: company.description}}>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import company from "../../data/company/company";
-import aboutPicture from "../../data/company/picture/aboutPicture"
+import homePicture from "../../data/company/picture/homePicture"
 import './Home.css'
 import { useEffect } from "react";
 
@@ -30,7 +29,22 @@ const Home = () =>{
     return (
         <>
             <div className="home-box">
-                <h1>ยินดีต้อนรับเข้าสู่ร้านผัก-ผลไม้แฮปปี้ฟาร์ม</h1>
+                <h1>🌿ยินดีต้อนรับเข้าสู่ แฮปปี้ฟาร์ม🌿</h1>
+                <h2>แหล่งรวมผักและผลไม้สดจากใจเกษตรกรไทย</h2>
+                <div className="slider-container">
+                  <div className="slider-track">
+                    {[...Array(2)].map((_, i) => (
+                      <React.Fragment key={i}>
+                        <img src={homePicture.home1} alt="home1" />
+                        <img src={homePicture.home2} alt="home2" />
+                        <img src={homePicture.home3} alt="home3" />
+                        <img src={homePicture.home4} alt="home4" />
+                        <img src={homePicture.home5} alt="home5" />
+                        <img src={homePicture.home6} alt="home6" />
+                      </React.Fragment>
+                    ))}
+                  </div>
+              </div>
             </div>
         </>
     )

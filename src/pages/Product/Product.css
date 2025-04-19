@@ -2,6 +2,7 @@
     text-align: center;
 }
 
+
 .bar-type{
     display: flex;
     justify-content: flex-start;
@@ -72,13 +73,15 @@
 
 .content-pd{
     display: grid;
-    grid-template-rows: 1fr 0.9fr 0.2fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
     gap: 5px;
 }
 
+
 .price{
-    /*text-align: right;*/
-    margin-bottom: 10px ;
+    /*text-align: right;
+    margin-bottom: 10px ;*/
+    text-align: center;
 }
 
 .payment{
@@ -116,7 +119,7 @@
 .butt-product-select div{
     width: 50px;
     height: 50px;
-    border: 1px solid green;
+    border: 1px solid rgb(105, 157, 183);
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -126,7 +129,7 @@
 .butt-product-select .add-butt,
 .butt-product-select .drop-butt {
     color: white;
-    background-color: rgb(53, 102, 125);
+    background-color: rgb(105, 157, 183);
 }
 
 .butt-product-select .add-butt:hover,

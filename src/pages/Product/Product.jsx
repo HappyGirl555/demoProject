@@ -135,40 +135,49 @@ const Product = () =>{
                             </div>
                             <div className="detail-pd">
                                 <div className="topic-pd">
-                                   <h3 style={{margin:0}}>{product.name}</h3>
-                                {product.organic && (
+                                      <h3 style={{margin:0}}>{product.name}</h3>
+                                    {product.organic && (
                                     <p style={{ color: "green", margin:0 }}>
                                         สินค้าออร์แกนิก
                                     </p>
-                                    )} 
+                                    )}
+                                    <p style={{margin:"0px", color:"rgb(199, 86, 0)"}}>ราคา&nbsp;{product.price_per_unit}&nbsp;บาท/{product.unit}</p>
                                 </div>
                                 <div className="des-pd">
                                     <p style={{margin:0}}>{product.description}</p>
                                 </div>
                             </div>
                             <div className="selected-pd">
-                                <div className="price">
-                                    <h4 style={{margin:"0px", textAlign:"center"}}>ราคา&nbsp;{product.price_per_unit}&nbsp;บาท/{product.unit}</h4>
+                                <div className="price" style={{height:"40px"}}>
+                                    {selectedProduct.find((pd)=>pd.product===product) ? 
+                                    (
+                                        <h2 style={{margin:"0px"}}>
+                                            ราคา&nbsp;
+                                            {selectedProduct.find((pd) => pd.product.id === product.id)?.quantity * product.price_per_unit}
+                                            &nbsp;บาท
+                                        </h2>
+                                    ) : null
+                                    }
                                 </div>
                                 <div className="butt-product-select">
-                                <div className={`add-butt ${products.find((pd) => pd.id === product.id)?.stock === 0 ?"no" : ""}`} 
-                                    onClick={() =>{
-                                        if (product.stock > 0) {
-                                            addNumProductSelec(product)
-                                        }}}
-                                    >
-                                        <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>+</p>
-                                    </div>
-                                    <div className="num">
-                                        <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>
-                                            {selectedProduct.find((pd) => pd.product.id === product.id)?.quantity || 0}</p>
-                                    </div>
                                     <div className={`drop-butt ${selectedProduct.find((pd) => pd.product.id === product.id)?.quantity >= 1 ? "" : "no"}` } 
                                     onClick={ () =>{
                                         if (selectedProduct.find((pd) => pd.product.id === product.id)?.quantity > 0) {
                                         dropNumProductSelec(product);
                                         }}}>
                                         <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>-</p>
+                                    </div>
+                                    <div className="num">
+                                        <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>
+                                            {selectedProduct.find((pd) => pd.product.id === product.id)?.quantity || 0}</p>
+                                    </div>
+                                    <div className={`add-butt ${products.find((pd) => pd.id === product.id)?.stock === 0 ?"no" : ""}`} 
+                                        onClick={() =>{
+                                            if (product.stock > 0) {
+                                                addNumProductSelec(product)
+                                            }}}
+                                        >
+                                        <p style={{margin:"0px", fontWeight:"bold", fontSize:"18px"}}>+</p>
                                     </div>
                                 </div>
                             </div>

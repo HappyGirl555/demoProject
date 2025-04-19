@@ -1,0 +1,34 @@
+.home-box{
+    margin: 0 20px 20px 20px;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-track {
+    display: flex;
+    width: calc(6 * 2 * 400px); /* จำนวนรูป x จำนวนรอบ x ความกว้างแต่ละรูป */
+    animation: scroll-left 30s linear infinite;
+  }
+  
+  .slider-track img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 0px;
+  }
+  
+  /* Keyframes สำหรับเลื่อนจากขวาไปซ้าย */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  

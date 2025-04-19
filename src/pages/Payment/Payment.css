@@ -1,21 +1,22 @@
 .payment-form{
-    width: 600px;
-    display: inline-block;
-}
-
-.payment-topic{
-    width: 600px;
     display: flex;
     justify-content: center;
-    align-items: center;
+
+    gap:100px
 }
 
+
+
+.payment-form div{
+    width: 400px;
+}
 
 .header-payment, .describ-pd{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-radius: 20px;
-    margin: 10px;
+    margin:  10px 0 10px 0px;
+    box-sizing: border-box;
 }
 
 .describ-pd{
@@ -27,6 +28,7 @@
 .header-payment{
     border: 1px solid rgb(247, 242, 173);
     background-color: rgb(247, 242, 173);
+    padding: 5px;
 }
 
 
@@ -38,12 +40,14 @@
     border: 1px solid rgb(199, 217, 234);
     background-color: rgb(199, 217, 234);
     border-radius: 20px;
-    margin: 10px;
-    padding: 7px;
+    margin:  10px 0 10px 0px;
+    padding: 5px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:"a a b";
     text-align: center;
+    width: 400px;
+    box-sizing: border-box;
 }
 
 
@@ -52,6 +56,7 @@
     justify-content: center;
     align-items: center;
     gap:20px;
+    margin-bottom: 20px;
 }
 
 .pay-selected-butt{
@@ -105,4 +110,40 @@
 
 .pay-success-butt p{
     margin: 0;
+}
+
+.per-input-user{
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    margin-bottom:10px;
+    text-align: left;
+    justify-content: center;
+    gap: 30px;
+}
+
+.per-input-user input{
+    border-radius: 5px;
+    padding: 9px;
+    border: 1px solid rgb(150, 105, 105);
+}
+
+.per-input-user div{
+    width: 250px;
+}
+
+.per-input-user select{
+    border-radius: 5px;
+    padding: 7px;
+    border: 1px solid rgb(150, 105, 105);
+}
+
+.final-total-price{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin:0;
+}
+
+.per-input-user .error-message{
+    font-size: 14px;
 }

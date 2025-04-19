@@ -21,12 +21,12 @@ header{
 }
 
 .butt-bar:hover{
-    background-color: rgb(173, 208, 241);
+    background-color: rgb(237, 173, 163);
     cursor: pointer;
 }
 
 .butt-bar:hover p{
-    color:rgb(18, 113, 169);
+    color:rgb(141, 47, 30);
 }
 
 .butt-bar a{
