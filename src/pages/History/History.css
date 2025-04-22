@@ -3,6 +3,10 @@
     display: inline-block;
 }
 
+.no-hist-box{
+    width: 700px;
+    height: 400px;
+}
 
 .header-box{
     display: flex;
@@ -13,6 +17,11 @@
     border-radius: 20px;
 }
 
+.header-box:hover{
+    cursor: pointer;
+    background-color: rgb(206, 211, 222);
+
+}
 
 .header-box h3{
     text-align: left;
@@ -33,12 +42,12 @@
 
 
 .head-describe-pd-history{
-    border: 1px solid rgb(206, 222, 217);
-    background-color: rgb(206, 222, 217);
+    border: 1px solid rgb(242, 203, 96);
+    background-color: rgb(242, 203, 96);
 }
 
 .describe-pd-history{
-    border: 1px solid rgb(198, 198, 198);
+    border: 0.5px solid rgb(198, 198, 198);
 }
 
 
@@ -80,7 +89,7 @@
     max-height: 1200px; 
     padding: 10px 30px 10px 30px;
     margin: 10px 0;
-    border: 1px solid rgb(182, 182, 182);
+    border: 0.5px solid rgb(182, 182, 182);
   }
 
 

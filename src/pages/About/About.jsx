@@ -42,16 +42,26 @@ const About = () =>{
                     </div>
                 </div>
                 <div className="mission-cpn">
-                    <h2>พันธกิจ</h2>
-                    {
+                    <div>
+                        <img src={aboutPicture.goals} className="goals-pic"></img>
+                    </div>
+                    <div>
+                        <h2>พันธกิจ</h2>
+                        {
                         company.mission.map((ms)=>(
                             <p>"{ms}"</p>
                         ))
-                    }
+                        }
+                    </div>
                 </div>
                 <div className="vision-cpn">
-                    <h2>วิสัยทัศน์</h2>
-                    <p dangerouslySetInnerHTML={{ __html: company.vision }}></p>
+                    <div>
+                        <h2>วิสัยทัศน์</h2>
+                        <p dangerouslySetInnerHTML={{ __html: company.vision }}></p>
+                    </div>
+                    <div>
+                        <img src={aboutPicture.vision} className="vision-pic"></img>
+                    </div>
                 </div>
                 <div className="whatWeDo-cpn">
                     <h2>สิ่งที่เราทำ</h2>

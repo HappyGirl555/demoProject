@@ -17,6 +17,9 @@ const History = () =>{
     console.log(historyPayment)
 
     useEffect(() => {
+
+        window.scrollTo(0, 0);
+
         if (location.state) {
             const { paidProducts, totalPrice, payType, date, time, user } = location.state;
     
@@ -48,13 +51,13 @@ const History = () =>{
          historyPayment.length > 0 ?(
             <>
                 <h1>ประวัติการสั่งซื้อ</h1>
-                {historyPayment.map((hp,id)=>(
+                {historyPayment.slice().reverse().map((hp,id)=>(
                     <div key={id} className="hist-box">
-                        <div className="header-box">
+                        <div className="header-box" onClick={() => openDeatail(hp)}>
                             <div>
                                 <h3 style={{textAlign:"left"}}>รายการสั่งซื้อวันที่ {hp.date} เวลา {hp.time} น. </h3>
                             </div>
-                            <div onClick={() => openDeatail(hp)}>
+                            <div >
                                 <i className={`fa fa-caret-down ${openHistory.includes(hp)? "visible":""}`} style={{fontSize:"40px"}}></i>
                             </div>
                         </div >
@@ -110,7 +113,9 @@ const History = () =>{
             </>
         ) : (
             <>
-                <h1>ไม่มีประวัติการทำรายการ</h1>
+                <div style={{color:"rgb(174, 174, 174)"}}>
+                    <h1 >ไม่มีประวัติการทำรายการ</h1>
+                </div>
             </>
         )
     )

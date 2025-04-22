@@ -71,14 +71,17 @@
 }
 
 .pay-selected-butt:hover{
-    border: 1px solid  rgb(175, 200, 200);
-    background-color: rgb(175, 200, 200);
+    outline: none;
+    border: 0.5px solid rgb(163, 177, 188);
+    box-shadow: 0px 0px 10px rgb(75, 104, 130);
     cursor: pointer;
 }
 
 .pay-selected-butt.selected{
-    border: 1px solid  rgb(188, 217, 186);
-    background-color: rgb(188, 217, 186);
+    border: 1px solid  rgb(51, 84, 48);
+    background-color: rgb(51, 84, 48);
+    color: aliceblue;
+    font-weight: bold;
 }
 
 
@@ -121,10 +124,23 @@
     gap: 30px;
 }
 
+.per-input-user label{
+    display:flex;
+    align-items: center;
+}
+
 .per-input-user input{
     border-radius: 5px;
     padding: 9px;
-    border: 1px solid rgb(150, 105, 105);
+    border: 0.5px solid rgb(215, 215, 215);
+    font-family: "Noto Sans Thai", sans-serif;
+    font-size: 16px;
+}
+
+.per-input-user input:focus{
+    outline: none;
+    border: 0.5px solid rgb(163, 177, 188);
+    box-shadow: 0px 0px 10px rgb(189, 224, 255);
 }
 
 .per-input-user div{
@@ -134,7 +150,10 @@
 .per-input-user select{
     border-radius: 5px;
     padding: 7px;
-    border: 1px solid rgb(150, 105, 105);
+    border: 0.5px solid rgb(215, 215, 215);
+    font-family: "Noto Sans Thai", sans-serif;
+    width: 175.6px;
+    font-size: 16px;
 }
 
 .final-total-price{

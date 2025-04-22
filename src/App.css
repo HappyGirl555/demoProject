@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -40,12 +41,19 @@
 
 body{
   font-family: "Noto Sans Thai", sans-serif;
-  background-color: rgb(72, 86, 81);
+  background-color: rgb(247, 247, 247);
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+/*
 html {
   overflow-y: scroll;
-}
+}*/
 
 html, body {
   height: 100%;

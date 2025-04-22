@@ -151,11 +151,11 @@ const Product = () =>{
                                 <div className="price" style={{height:"40px"}}>
                                     {selectedProduct.find((pd)=>pd.product===product) ? 
                                     (
-                                        <h2 style={{margin:"0px"}}>
+                                        <h3 style={{margin:"0px"}}>
                                             ราคา&nbsp;
                                             {selectedProduct.find((pd) => pd.product.id === product.id)?.quantity * product.price_per_unit}
                                             &nbsp;บาท
-                                        </h2>
+                                        </h3>
                                     ) : null
                                     }
                                 </div>
@@ -183,7 +183,7 @@ const Product = () =>{
                             </div>
                             
                             <div className="stock-pd">
-                                <p style={{margin:0, color:"rgb(195, 109, 44)", textAlign:"center"}}>จำนวนสินค้า {product.stock}&nbsp;{product.unit}</p>
+                                <p style={{margin:0, color:"rgb(195, 109, 44)", textAlign:"center"}}>เหลือสินค้า {product.stock}&nbsp;{product.unit}</p>
                             </div>
                         </div>
                     </div>

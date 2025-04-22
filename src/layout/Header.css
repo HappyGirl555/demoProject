@@ -2,7 +2,13 @@ header{
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(251, 244, 235);
+    background-color: rgb(186, 209, 188);
+    top: 0;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 200;
 }
 
 .contain-header{
@@ -12,26 +18,28 @@ header{
     align-items: center;
     justify-content: flex-end;
     padding: auto;
-    background-color: rgb(251, 244, 235);
+    background-color: rgb(186, 209, 188);
 }
 
 .butt-bar{
     padding: 0 30px 0 30px;
     box-sizing: border-box;
+    height: auto;
+    text-decoration:none;
 }
 
 .butt-bar:hover{
-    background-color: rgb(237, 173, 163);
+    background-color: rgb(136, 152, 136);
     cursor: pointer;
 }
 
 .butt-bar:hover p{
-    color:rgb(141, 47, 30);
+    color: white;
 }
 
-.butt-bar a{
+.butt-bar p{
     font-weight: 800;
-    color: black;
-    text-decoration:none;
+    color: rgb(51, 69, 52);
 }
+
 

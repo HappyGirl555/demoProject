@@ -4,21 +4,20 @@ import "./Header.css"
 
 const Header = () =>{
     return (
-    <header>
-
+    <header>        
             <div className="contain-header">
-                <div className="butt-bar">
-                <NavLink to='/'><p>หน้าหลัก</p></NavLink>
-                </div>
-                <div className="butt-bar">
-                <NavLink to='about'><p>เกี่ยวกับเรา</p></NavLink>
-                </div>
-                <div className="butt-bar">
-                <NavLink to='product'><p>ผลิตภัณฑ์</p></NavLink>
-                </div>
-                <div className="butt-bar">
-                <NavLink to='history'><p>ประวัติการสั่งซื้อ</p></NavLink>
-                </div>
+                <NavLink to='/' className="butt-bar">
+                        <p>หน้าหลัก</p>
+                </NavLink>
+                <NavLink to='about' className="butt-bar">
+                        <p>เกี่ยวกับเรา</p>
+                </NavLink>
+                <NavLink to='product' className="butt-bar">
+                        <p>ผลิตภัณฑ์</p>
+                </NavLink>
+                <NavLink to='history' className="butt-bar">
+                        <p>ประวัติการสั่งซื้อ</p>
+                </NavLink>
             </div>
     
     </header>

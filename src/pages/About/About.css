@@ -47,17 +47,33 @@
 
 .mission-cpn{
   margin-bottom: 50px;
-  border: 1px solid rgb(177, 177, 177);
   padding: 20px;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.mission-cpn h2, .vision-cpn h2{
+  margin: 10px 0;
+}
+
+.goals-pic, .vision-pic{
+  width: 300px;
 }
 
 .vision-cpn{
   margin-bottom: 50px;
-  border: 1px solid rgb(177, 177, 177);
   padding: 20px;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  gap: 35px;
 }
+
 
 .whatWeDo-cpn{
   display: inline-block;
@@ -90,8 +106,10 @@
 
 .commitment-cpn{
   margin-bottom: 30px;
-  border: 1px solid rgb(177, 177, 177);
+  border: 0.2px solid rgb(255, 234, 246);
   padding: 20px;
   border-radius: 20px;
+  box-shadow: 0px 5px 20px rgb(255, 226, 248);
+  outline: none;
 }
 

@@ -29,6 +29,7 @@ const Payment = () =>{
 
 
     useEffect(()=>{
+        window.scrollTo(0, 0);
         const provinces = [...new Set(raw_address.map(item => item.province))].sort();
         setProvinces(provinces)
     },[])
